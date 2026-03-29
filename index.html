@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Knitmasters</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- choose a font -->
+    <!-- choose a favicon -->
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" type="module" defer></script>
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a href="/page2.html">Other page</a>
+    </nav>
+    <main>
+      <div class="container">
+        <h1>Knitmasters: Knitting Timer</h1>
+
+        <section class="input-container">
+          <form>
+            <label for="rows-amount"
+              >How many rows do you need to complete?</label
+            >
+            <input id="rows-amount" type="number" min="0" value="0" />
+
+            <label for="take-breaks">Remind me to take breaks?</label>
+            <input id="take-breaks" type="checkbox" />
+
+            <section class="buttons-container">
+              <button class="btn" id="start-btn" type="button">Start</button>
+            </section>
+          </form>
+        </section>
+
+        <section class="timer-container">
+          <section class="timer">
+            <p>
+              <span id="hours">00</span>:<span id="minutes">00</span>:<span
+                id="seconds"
+                >00</span
+              >
+            </p>
+          </section>
+          <section class="buttons-container">
+            <!-- <button class="btn" id="start-btn">Start</button> -->
+            <button class="btn" id="pause-btn">Pause</button>
+            <button class="btn" id="reset-btn">Reset</button>
+          </section>
+        </section>
+
+        <section class="data-container">
+          <section class="buttons-container">
+            <button class="btn" id="new-row-btn">New Row Completed</button>
+            <button class="btn" id="clear-btn">Clear Data</button>
+          </section>
+
+          <section class="row-data">
+            <div class="percent-completed-container">
+              <div
+                class="percent-completed-bar"
+                id="percent-completed-bar"
+              ></div>
+            </div>
+            <p>
+              Percent completed: <span id="percent-completed-number">0</span>%
+            </p>
+            <p>Average Time Per Row: <span id="avg-time">0 min</span></p>
+            <p>
+              Estimated time remaining: <span id="time-remaining">0 min</span>
+            </p>
+          </section>
+          <ul class="row-list" id="row-list">
+            <!-- <li class="counted-row">
+              <strong>Row <span class="row-number">1</span>:</strong>
+              <span class="row-time">3 min 0 sec</span>
+            </li>
+            <li class="counted-row">
+              <strong>Row <span class="row-number">2</span>:</strong>
+              <span class="row-time">5 min 22 sec</span>
+            </li>
+            <li class="counted-row">
+              <strong>Row <span class="row-number">3</span>:</strong>
+              <span class="row-time">1 min 12 sec</span>
+            </li>
+            <li class="counted-row">
+              <strong>Row <span class="row-number">4</span>:</strong>
+              <span class="row-time">2 min 8 sec</span>
+            </li> -->
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <div class="modal-container" id="modal-container">
+      <div class="modal">
+        <h2>
+          You have been working for
+          <span id="minutes-working">25</span> minutes. Time for a break!
+        </h2>
+        <p>Take a <span id="break-duration">5</span>-minute break.</p>
+        <section class="buttons-container">
+          <button class="btn" id="break-over-btn">Break Over</button>
+        </section>
+        <p>
+          What is the Pomodoro Technique?
+          <a
+            href="https://www.breeze.pm/blog/pomodoro-technique"
+            target="_blank"
+            >Click here to read all about it!</a
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
