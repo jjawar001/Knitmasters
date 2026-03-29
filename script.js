@@ -185,6 +185,6 @@ function formatTime(seconds) {
   return {
     hrs: String(Math.floor(seconds / 3600)).padStart(2, '0'),
     mins: String(Math.floor(seconds / 60) % 60).padStart(2, '0'),
-    secs: String(seconds % 60).padStart(2, '0'),
+    secs: String(Math.floor(seconds % 60)).padStart(2, '0'),
   };
 }
