@@ -143,14 +143,14 @@ function setData() {
     const { hrs, mins, secs } = formatTime(avg);
     avgTime.textContent = isNaN(avg)
       ? `0 mins`
-      : `${hrs} hrs ${mins} mins ${secs} secs`;
+      : `${Math.floor(hrs)} hrs ${Math.floor(mins)} mins ${Math.floor(secs)} secs`;
 
     const remainingRows = total - rowArr.length;
     const estimate = avg * remainingRows;
     const { hrs: estHrs, mins: estMins, secs: estSecs } = formatTime(estimate);
     timeRemaining.textContent = isNaN(estimate)
       ? `0 mins`
-      : `${estHrs} hrs ${estMins} mins ${estSecs} secs`;
+      : `${Math.floor(estHrs)} hrs ${Math.floor(estMins)} mins ${Math.floor(estSecs)} secs`;
   }
 }
 
@@ -185,6 +185,6 @@ function formatTime(seconds) {
   return {
     hrs: String(Math.floor(seconds / 3600)).padStart(2, '0'),
     mins: String(Math.floor(seconds / 60) % 60).padStart(2, '0'),
-    secs: String(Math.floor(seconds % 60)).padStart(2, '0'),
+    secs: String(seconds % 60).padStart(2, '0'),
   };
 }
