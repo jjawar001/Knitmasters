@@ -90,8 +90,8 @@ function startTimer() {
   minsCount.textContent = mins;
   secsCount.textContent = secs;
 
-  // if (count > 0 && count % 1500 === 0) {
-  if (count > 0 && count % 10 === 0) {
+  if (count > 0 && count % 1500 === 0) {
+  //if (count > 0 && count % 10 === 0) {
     controlModal();
   }
 
