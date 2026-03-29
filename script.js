@@ -1,4 +1,4 @@
-// document.body.classList.toggle('dark');
+document.body.classList.toggle('dark');
 
 // TIMER BTNS
 const startBtn = document.getElementById('start-btn');
